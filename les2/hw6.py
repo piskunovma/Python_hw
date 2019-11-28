@@ -21,14 +21,29 @@
 “количество”: [5, 2, 7],
 “ед”: [“шт.”]
 }"""
+idx = 1
+dict = {'Название': 'Введите название товара', 'Цена': 'Введите цену товара', 'Количество': 'Введите количество товара'}
+answer = 1
 
-user_var1 = input("Введите название товара: \n")
-print(user_var1, type(user_var1))
-# user_var2 = input("Введите цену товара: \n")
-# user_var3 = input("Введите количество товара: \n")
-# user_var4 = input("Введите единицу измерения товара: \n")
-#
-# user_tuple = (1, {"Название": user_var1, "Цена": user_var2, "Колличество": user_var3, "Ед": user_var4})
-# print(user_tuple)
+user_list = []
+while answer:
+    result_dict = {}
+    for key, itm in dict.items():
+        user_dict = input(f'{itm} \n')
+        result_dict[key] = user_dict
+    user_list.append((idx, result_dict))
+    idx += 1
 
+    while True:
+        answer = int(input("Ввести новый товар?(0 - No; 1 - Yes)\n"))
+        if answer == 1:
+             break
+        else:
+            break
 
+analytics = {}
+for key in dict:
+    analytics[key] = [itm[1][key] for itm in user_list]
+
+print(user_list)
+print(analytics)
