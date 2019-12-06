@@ -65,4 +65,15 @@
 #     people[tuple(quest)[0]] = tmp
 #
 # print(people)
-
+#
+# dict = {'Название': 'Введите название товара', 'Цена': 'Введите цену товара', 'Количество': 'Введите количество товара'}
+#
+# user_list = [(1, {'Название': 'iphone', 'Цена': '50000', 'Количество': '2'}), (2, {'Название': 'macbook', 'Цена': '150000', 'Количество': '1'})]
+# analytics = {}
+#
+# for key in dict:
+#     a = [itm[1][key] for itm in user_list]
+#     print(a)
+#     analytics[key] = a
+# print(user_list)
+# print(analytics)
